@@ -4,7 +4,7 @@
 
 ### Description
 
-A template to quickly spin up interactive programs using raylib. Targets all desktop platforms and wasm.
+A template to quickly spin up interactive programs using [raylib](https://www.raylib.com/). Targets all desktop platforms and wasm.
 
 This template implements 4 scenes:
 
