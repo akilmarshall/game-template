@@ -35,7 +35,15 @@ Images of the stub scenes implemented in this template.
 Game studio splash scene
 ![studio splash](screenshots/splash.png)
 
+Raylib logo animation scene
+![logo](screenshots/logo.png)
 
-### Developers
+Button hovering
+![hover](screenshots/hover.png)
+
+Credit scene stub
+![credit scene](screenshots/credit.png)
+
+ Developers
 
  - Akil Marshall
