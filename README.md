@@ -24,7 +24,7 @@ This template implements 4 scenes:
 ### Features
 
  - Scene system with animated and instant transitions
- - [Functional Relational architecture](https://intothetarpit.com)
+ - [Functional Relational architecture](http://curtclifton.net/papers/MoseleyMarks06a.pdf)
  - Buttons
 
 
