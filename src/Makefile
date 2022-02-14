@@ -374,6 +374,7 @@ endif
 #------------------------------------------------------------------------------------------------
 PROJECT_SOURCE_FILES ?= \
     api.cxx \
+	credit.cxx \
     main.cxx \
 	menu.cxx \
     rayanim.cxx \

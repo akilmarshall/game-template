@@ -27,6 +27,15 @@ void api::scene::menu::init() {
         .active = false,
         .hovered = false,
     });
+    buttons.push_back(data::Button{
+        .id = "credit",
+        .text = "Game Credits",
+        .position = Vector2{.x = root.x, .y = root.y + (4 * spacing)},
+        .size = Vector2{.x = 200, .y = 30},
+        .fontsize = 20,
+        .active = false,
+        .hovered = false,
+    });
 }
 void api::scene::menu::update() {
     auto mouse = GetMousePosition();
@@ -45,6 +54,8 @@ void api::scene::menu::update() {
                 api::scene::transition(data::scene::SPLASH);
             } else if (b.id == "rayanim") {
                 api::scene::transition(data::scene::RAYANIM);
+            } else if (b.id == "credit") {
+                api::scene::transition(data::scene::CREDIT);
             }
         } else if (CheckCollisionPointRec(mouse, region)) {
             // button hovered

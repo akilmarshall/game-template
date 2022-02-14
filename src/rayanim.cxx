@@ -89,4 +89,3 @@ void api::scene::rayanim::draw() {
         } break;
     }
 }
-bool api::scene::rayanim::done() { return data::scene::rayanim::done; }

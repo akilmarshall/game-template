@@ -35,4 +35,3 @@ void api::scene::splash::draw() {
     DrawText("Presents", (GetScreenWidth() / 2) - 70,
              (GetScreenHeight() / 2) + 40, 30, BLACK);
 }
-bool api::scene::splash::done() { return data::scene::splash::done; }

@@ -25,19 +25,22 @@ namespace rayanim {
 void init();
 void update();
 void draw();
-bool done();
 }  // namespace rayanim
 namespace splash {
 void init();
 void update();
 void draw();
-bool done();
 }  // namespace splash
 namespace menu {
 void init();
 void update();
 void draw();
 }  // namespace menu
+namespace credit {
+void init();
+void update();
+void draw();
+}  // namespace credit
 }  // namespace scene
 namespace feeder {}
 namespace observer {}

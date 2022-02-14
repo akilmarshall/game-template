@@ -20,11 +20,9 @@ void api::scene::init(Scene scene) {
         case MENU: {
             menu::init();
         } break;
-            /* case data::scene::AIRCONTROLLER: { */
-            /*     api::scene::ACSceneInit(); */
-            /* } break; */
-            /* case data::scene::CREDIT: { */
-            /* } break; */
+        case CREDIT: {
+            credit::init();
+        } break;
     }
 }
 void api::scene::change(Scene scene) {
@@ -37,6 +35,9 @@ void api::scene::change(Scene scene) {
         } break;
         case MENU: {
             menu::init();
+        } break;
+        case CREDIT: {
+            credit::init();
         } break;
     }
     current = scene;
@@ -55,7 +56,7 @@ void api::scene::updateTransition() {
             alpha = 1.f;
             // initialize next scene
             switch (to_scene) {
-                case data::scene::RAYANIM: {
+                case RAYANIM: {
                     rayanim::init();
                 } break;
                 case SPLASH: {
@@ -64,11 +65,9 @@ void api::scene::updateTransition() {
                 case MENU: {
                     menu::init();
                 } break;
-                    /* case data::scene::AIRCONTROLLER: { */
-                    /*     api::scene::ACSceneInit(); */
-                    /* } break; */
-                    /* case data::scene::CREDIT: { */
-                    /* } break; */
+                case CREDIT: {
+                    credit::init();
+                } break;
             }
             current = to_scene;
             transition_fade_out = true;
@@ -90,37 +89,34 @@ void api::scene::drawTransition() {
 void api::scene::step() {
     if (!on_transition) {
         switch (current) {
-            case data::scene::RAYANIM: {
+            case RAYANIM: {
                 rayanim::update();
-                if (rayanim::done()) {
-                    api::scene::transition(SPLASH);
+                if (data::scene::rayanim::done) {
+                    transition(SPLASH);
                 }
             } break;
             case SPLASH: {
                 splash::update();
-                if (splash::done()) {
-                    api::scene::transition(MENU);
+                if (data::scene::splash::done) {
+                    transition(MENU);
                 }
             } break;
             case MENU: {
                 menu::update();
             } break;
-                /* case data::scene::AIRCONTROLLER: { */
-                /*     api::scene::ACSceneUpdate(); */
-                /*     if (api::scene::ACSceneDone()) { */
-                /*         api::scene::transition(data::scene::AIRCONTROLLER);
-                 */
-                /*     } */
-                /* } break; */
-                /* case data::scene::CREDIT: { */
-                /* } break; */
+            case CREDIT: {
+                credit::update();
+                if (data::scene::credit::done) {
+                    transition(MENU);
+                }
+            } break;
         }
     } else {
-        api::scene::updateTransition();
+        updateTransition();
     }
     BeginDrawing();
     switch (current) {
-        case data::scene::RAYANIM: {
+        case RAYANIM: {
             rayanim::draw();
         } break;
         case SPLASH: {
@@ -129,14 +125,12 @@ void api::scene::step() {
         case MENU: {
             menu::draw();
         } break;
-            /* case data::scene::AIRCONTROLLER: { */
-            /*     api::scene::ACSceneDraw(); */
-            /* } break; */
-            /* case data::scene::CREDIT: { */
-            /* } break; */
+        case CREDIT: {
+            credit::draw();
+        } break;
     }
     if (on_transition) {
-        api::scene::drawTransition();
+        drawTransition();
     }
     EndDrawing();
 }

@@ -32,6 +32,7 @@ enum Scene {
     RAYANIM,
     SPLASH,
     MENU,
+    CREDIT,
 };
 inline Scene current;
 inline float alpha;
@@ -63,10 +64,16 @@ namespace menu {
 inline int frame_counter;
 inline string title;
 inline int titlesize;
-inline Vector2 root;
+inline Vector2 root;  // location of the title/menu button stack
 inline int spacing;
 inline vector<Button> buttons;
 }  // namespace menu
+
+namespace credit {
+inline int frame_counter;
+inline int t;  // duration
+inline bool done;
+}  // namespace credit
 
 }  // namespace scene
 
