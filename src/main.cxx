@@ -9,7 +9,7 @@
 int main() {
     InitWindow(data::width, data::height, "raylib template");
     // define initial scene
-    api::scene::init(data::scene::MENU);
+    api::scene::init(data::scene::RAYANIM);
 #if defined(PLATFORM_WEB)
     emscripten_set_main_loop(api::scene::step, data::fps, 1);
 #else

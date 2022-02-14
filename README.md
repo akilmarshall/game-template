@@ -1,60 +1,41 @@
------------------------------------
+## Game Template
 
-_DISCLAIMER:_
-
-Welcome to **raylib game template**!
-
-This template provides a base structure to start developing a small raylib game in plain C. The repo is also pre-configured with a default `LICENSE` (zlib/libpng) and a `README.md` (this one) to be properly filled by users. Feel free to change the LICENSE as required.
-
-All the sections defined by `$(Data to Fill)` are expected to be edited and filled properly. It's recommended to delete this disclaimer message after editing this `README.md` file.
-
-This template has been created to be used with raylib (www.raylib.com) and it's licensed under an unmodified zlib/libpng license.
-
-_Copyright (c) 2014-2022 Ramon Santamaria ([@raysan5](https://twitter.com/raysan5))_
-
------------------------------------
-
-## $(Game Title)
-
-![$(Game Title)](screenshots/screenshot000.png "$(Game Title)")
+![game template](screenshots/menu.png)
 
 ### Description
 
-$(Your Game Description)
+A template to quickly spin up interactive programs using raylib. Targets all desktop platforms and wasm.
+
+This template implements 4 scenes:
+
+- Splash:
+    - The standard scene that plays at the beginning of a game
+    - transitions to ray logo scene after t seconds or if the user clicks
+- Raylib Logo Animation
+    - Giving credit to the library that makes this possible with it's animated logo scene to play after the Splash scene  
+    - transitions to menu scene after t seconds or if the user clicks
+- Menu
+    - offers several buttons that transition to all other scenes 
+- Credit
+    - transitions back to the menu after t seconds 
+
+
 
 ### Features
 
- - $(Game Feature 01)
- - $(Game Feature 02)
- - $(Game Feature 03)
+ - Scene system with animated and instant transitions
+ - [Functional Relational architecture](https://intothetarpit.com)
+ - Buttons
 
-### Controls
-
-Keyboard:
- - $(Game Control 01)
- - $(Game Control 02)
- - $(Game Control 03)
 
 ### Screenshots
 
-_TODO: Show your game to the world, animated GIFs recommended!._
+Images of the stub scenes implemented in this template.
+
+Game studio splash scene
+![studio splash](screenshots/splash.png)
+
 
 ### Developers
 
- - $(Developer 01) - $(Role/Tasks Developed)
- - $(Developer 02) - $(Role/Tasks Developed)
- - $(Developer 03) - $(Role/Tasks Developed)
-
-### Links
-
- - YouTube Gameplay: $(YouTube Link)
- - itch.io Release: $(itch.io Game Page)
- - Steam Release: $(Steam Game Page)
-
-### License
-
-This game sources are licensed under an unmodified zlib/libpng license, which is an OSI-certified, BSD-like license that allows static linking with closed source software. Check [LICENSE](LICENSE) for further details.
-
-$(Additional Licenses)
-
-*Copyright (c) $(Year) $(User Name) ($(User Twitter/GitHub Name))*
+ - Akil Marshall
