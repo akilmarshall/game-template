@@ -1,6 +1,4 @@
 build
-*.wasm
-*.html
 # Prerequisites
 *.d
 
