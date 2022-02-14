@@ -1,0 +1,77 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-std=c++20",
+      "-Wall",
+      "-Wno-missing-braces",
+      "-Wunused-result",
+      "-D_DEFAULT_SOURCE",
+      "-O2",
+      "-D_DEFAULT_SOURCE",
+      "-I.",
+      "-I/home/akil/Project/raylib/raylib-game-template/src",
+      "-I/home/akil/Project/raylib/raylib-game-template/src/external",
+      "-I/home/akil/Project/raylib/raylib-game-template/src/extras",
+      "-I/usr/include",
+      "-DPLATFORM_DESKTOP",
+      "-o",
+      "raylib_template",
+      "api.cxx"
+    ],
+    "directory": "/home/akil/Project/raylib/raylib-game-template/src",
+    "file": "/home/akil/Project/raylib/raylib-game-template/src/api.cxx",
+    "output": "/home/akil/Project/raylib/raylib-game-template/src/raylib_template"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-std=c++20",
+      "-Wall",
+      "-Wno-missing-braces",
+      "-Wunused-result",
+      "-D_DEFAULT_SOURCE",
+      "-O2",
+      "-D_DEFAULT_SOURCE",
+      "-I.",
+      "-I/home/akil/Project/raylib/raylib-game-template/src",
+      "-I/home/akil/Project/raylib/raylib-game-template/src/external",
+      "-I/home/akil/Project/raylib/raylib-game-template/src/extras",
+      "-I/usr/include",
+      "-DPLATFORM_DESKTOP",
+      "-o",
+      "raylib_template",
+      "main.cxx"
+    ],
+    "directory": "/home/akil/Project/raylib/raylib-game-template/src",
+    "file": "/home/akil/Project/raylib/raylib-game-template/src/main.cxx",
+    "output": "/home/akil/Project/raylib/raylib-game-template/src/raylib_template"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-std=c++20",
+      "-Wall",
+      "-Wno-missing-braces",
+      "-Wunused-result",
+      "-D_DEFAULT_SOURCE",
+      "-O2",
+      "-D_DEFAULT_SOURCE",
+      "-I.",
+      "-I/home/akil/Project/raylib/raylib-game-template/src",
+      "-I/home/akil/Project/raylib/raylib-game-template/src/external",
+      "-I/home/akil/Project/raylib/raylib-game-template/src/extras",
+      "-I/usr/include",
+      "-DPLATFORM_DESKTOP",
+      "-o",
+      "raylib_template",
+      "splash.cxx"
+    ],
+    "directory": "/home/akil/Project/raylib/raylib-game-template/src",
+    "file": "/home/akil/Project/raylib/raylib-game-template/src/splash.cxx",
+    "output": "/home/akil/Project/raylib/raylib-game-template/src/raylib_template"
+  }
+]

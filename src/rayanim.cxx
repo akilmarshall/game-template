@@ -1,6 +1,8 @@
-#include "ray_animation.hpp"
+#include "api.hxx"
 
-void RayAnimation::init() {
+using namespace data::scene::rayanim;
+
+void api::scene::rayanim::init() {
     logoX = (GetScreenWidth() / 2) - 128;
     logoY = (GetScreenHeight() / 2) - 128;
     frame_counter = 0;
@@ -10,9 +12,9 @@ void RayAnimation::init() {
     bottom = 16;
     right = 16;
     state = 0;
-    done_ = false;
+    data::scene::rayanim::done = false;
 }
-void RayAnimation::update() {
+void api::scene::rayanim::update() {
     switch (state) {
         case 0: {
             ++frame_counter;
@@ -42,17 +44,17 @@ void RayAnimation::update() {
                 frame_counter = 0;
             }
             if (letterCount >= 10 && frame_counter > 30) {
-                done_ = true;
+                data::scene::rayanim::done = true;
             }
         } break;
     }
 
     if (IsMouseButtonPressed(0) || IsMouseButtonPressed(1) ||
         IsKeyPressed(KEY_SPACE)) {
-        done_ = true;
+        data::scene::rayanim::done = true;
     }
 }
-void RayAnimation::draw() {
+void api::scene::rayanim::draw() {
     ClearBackground(RAYWHITE);
     switch (state) {
         case 0: {
@@ -87,5 +89,4 @@ void RayAnimation::draw() {
         } break;
     }
 }
-void RayAnimation::unload() {}
-bool RayAnimation::done() { return done_; }
+bool api::scene::rayanim::done() { return data::scene::rayanim::done; }

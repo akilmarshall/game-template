@@ -373,9 +373,11 @@ endif
 # Define source code object files required
 #------------------------------------------------------------------------------------------------
 PROJECT_SOURCE_FILES ?= \
-    main.cpp \
-	splash.cpp \
-	ray_animation.cpp
+    api.cxx \
+    main.cxx \
+	menu.cxx \
+    rayanim.cxx \
+    splash.cxx \
 
 # Define all object files from source files
 OBJS = $(patsubst %.c, %.o, $(PROJECT_SOURCE_FILES))
