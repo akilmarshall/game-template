@@ -1,11 +1,9 @@
-#include "api.hxx"
-
-#include "raylib.h"
+#include "api.hpp"
 
 using namespace api::scene;
-using namespace data::scene;
+using namespace scene;
 
-void api::scene::init(Scene scene) {
+void api::scene::init(scene_t scene) {
     alpha = 0.f;
     transition_fade_out = true;
     on_transition = false;
@@ -25,7 +23,7 @@ void api::scene::init(Scene scene) {
         } break;
     }
 }
-void api::scene::change(Scene scene) {
+void api::scene::change(scene_t scene) {
     switch (scene) {
         case RAYANIM: {
             rayanim::init();
@@ -42,7 +40,7 @@ void api::scene::change(Scene scene) {
     }
     current = scene;
 }
-void api::scene::transition(Scene scene) {
+void api::scene::transition(scene_t scene) {
     on_transition = true;
     transition_fade_out = false;
     from_scene = current;
@@ -91,13 +89,13 @@ void api::scene::step() {
         switch (current) {
             case RAYANIM: {
                 rayanim::update();
-                if (data::scene::rayanim::done) {
+                if (::scene::rayanim::done) {
                     transition(SPLASH);
                 }
             } break;
             case SPLASH: {
                 splash::update();
-                if (data::scene::splash::done) {
+                if (::scene::splash::done) {
                     transition(MENU);
                 }
             } break;
@@ -106,7 +104,7 @@ void api::scene::step() {
             } break;
             case CREDIT: {
                 credit::update();
-                if (data::scene::credit::done) {
+                if (::scene::credit::done) {
                     transition(MENU);
                 }
             } break;

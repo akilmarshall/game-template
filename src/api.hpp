@@ -1,21 +1,17 @@
-/* [Accidental]
- * - gui/api (handle the users input, structured output)
- * - feeders
- * - observers
- */
-#ifndef API_HXX
-#define API_HXX
+#ifndef API_HPP
+#define API_HPP
 
 #include <cmath>
 
-#include "data.hxx"
+#include "data.hpp"
 #include "raylib.h"
+#include "type.hpp"
 
 namespace api {
 namespace scene {
-void init(data::scene::Scene);        // define and initialize the initial scene
-void change(data::scene::Scene);      // change scene no transition
-void transition(data::scene::Scene);  // transition from currentscene to scene
+void init(scene_t);        // define and initialize the initial scene
+void change(scene_t);      // change scene no transition
+void transition(scene_t);  // transition from currentscene to scene
 void updateTransition();
 void drawTransition();
 void step();  // void function allowing control to be passed off to a web

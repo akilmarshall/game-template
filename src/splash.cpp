@@ -1,18 +1,18 @@
-#include "api.hxx"
+#include "api.hpp"
 
-using namespace data::scene::splash;
+using namespace scene::splash;
 
 void api::scene::splash::init() {
     frame_counter = 0;
     t = 5;
-    data::scene::splash::done = false;
+    done = false;
 }
 void api::scene::splash::update() {
-    if (frame_counter > (data::fps * t)) {
-        data::scene::splash::done = true;
+    if (frame_counter > (fps * t)) {
+        done = true;
     }
     if (IsMouseButtonPressed(0)) {
-        data::scene::splash::done = true;
+        done = true;
     }
     ++frame_counter;
 }

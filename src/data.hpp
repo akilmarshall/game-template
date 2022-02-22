@@ -1,45 +1,22 @@
-/* [Essential]
- * "relational" definitions of the stateful components of the system
- */
-#ifndef DATA_HXX
-#define DATA_HXX
-
-#include <iostream>
+#ifndef DATA_HPP
+#define DATA_HPP
 #include <vector>
 
-#include "raylib.h"
-
-using std::string;
+#include "type.hpp"
 using std::vector;
 
-namespace data {
-struct Button {
-    string id;  // primary key
-    string text;
-    Vector2 position;
-    Vector2 size;
-    int fontsize;
-    bool active;
-    bool hovered;
-};
-
+// relations/singletons
 inline int fps = 60;
 inline int width = 800;
 inline int height = 600;
 
 namespace scene {
-enum Scene {
-    RAYANIM,
-    SPLASH,
-    MENU,
-    CREDIT,
-};
-inline Scene current;
+inline scene_t current;
 inline float alpha;
 inline bool transition_fade_out;
 inline bool on_transition;
-inline Scene from_scene;
-inline Scene to_scene;
+inline scene_t from_scene;
+inline scene_t to_scene;
 
 namespace rayanim {
 inline int frame_counter;
@@ -66,7 +43,7 @@ inline string title;
 inline int titlesize;
 inline Vector2 root;  // location of the title/menu button stack
 inline int spacing;
-inline vector<Button> buttons;
+inline vector<button> buttons;
 }  // namespace menu
 
 namespace credit {
@@ -76,6 +53,4 @@ inline bool done;
 }  // namespace credit
 
 }  // namespace scene
-
-}  // namespace data
 #endif

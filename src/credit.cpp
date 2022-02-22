@@ -1,15 +1,15 @@
-#include "api.hxx"
+#include "api.hpp"
 
-using namespace data::scene::credit;
+using namespace scene::credit;
 
 void api::scene::credit::init() {
     frame_counter = 0;
     t = 10;
-    data::scene::credit::done = false;
+    done = false;
 }
 void api::scene::credit::update() {
     //
-    if (frame_counter / data::fps >= t) {
+    if (frame_counter / fps >= t) {
         done = true;
     }
     ++frame_counter;

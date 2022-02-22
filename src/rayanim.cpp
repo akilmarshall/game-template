@@ -1,6 +1,6 @@
-#include "api.hxx"
+#include "api.hpp"
 
-using namespace data::scene::rayanim;
+using namespace scene::rayanim;
 
 void api::scene::rayanim::init() {
     logoX = (GetScreenWidth() / 2) - 128;
@@ -12,7 +12,7 @@ void api::scene::rayanim::init() {
     bottom = 16;
     right = 16;
     state = 0;
-    data::scene::rayanim::done = false;
+    done = false;
 }
 void api::scene::rayanim::update() {
     switch (state) {
@@ -44,14 +44,14 @@ void api::scene::rayanim::update() {
                 frame_counter = 0;
             }
             if (letterCount >= 10 && frame_counter > 30) {
-                data::scene::rayanim::done = true;
+                done = true;
             }
         } break;
     }
 
     if (IsMouseButtonPressed(0) || IsMouseButtonPressed(1) ||
         IsKeyPressed(KEY_SPACE)) {
-        data::scene::rayanim::done = true;
+        done = true;
     }
 }
 void api::scene::rayanim::draw() {

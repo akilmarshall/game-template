@@ -373,12 +373,12 @@ endif
 # Define source code object files required
 #------------------------------------------------------------------------------------------------
 PROJECT_SOURCE_FILES ?= \
-    api.cxx \
-	credit.cxx \
-    main.cxx \
-	menu.cxx \
-    rayanim.cxx \
-    splash.cxx \
+    api.cpp \
+	credit.cpp \
+    main.cpp \
+	menu.cpp \
+    rayanim.cpp \
+    splash.cpp \
 
 # Define all object files from source files
 OBJS = $(patsubst %.c, %.o, $(PROJECT_SOURCE_FILES))

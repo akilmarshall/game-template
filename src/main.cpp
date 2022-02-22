@@ -2,18 +2,18 @@
 #include <emscripten/emscripten.h>
 #endif
 
-#include "api.hxx"
-#include "data.hxx"
+#include "api.hpp"
+#include "data.hpp"
 #include "raylib.h"
 
 int main() {
-    InitWindow(data::width, data::height, "raylib template");
+    InitWindow(width, height, "raylib template");
     // define initial scene
-    api::scene::init(data::scene::RAYANIM);
+    api::scene::init(RAYANIM);
 #if defined(PLATFORM_WEB)
-    emscripten_set_main_loop(api::scene::step, data::fps, 1);
+    emscripten_set_main_loop(api::scene::step, fps, 1);
 #else
-    SetTargetFPS(data::fps);
+    SetTargetFPS(fps);
     while (!WindowShouldClose()) {
         api::scene::step();
     }
