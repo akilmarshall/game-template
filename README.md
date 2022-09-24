@@ -1,6 +1,6 @@
 ## Game Template
 
-![game template](screenshots/menu.png)
+![game template](https://imgur.com/MIsCKri)
 
 ### Description
 
@@ -52,16 +52,16 @@ $ emsdk activate latest  # requires privilege
 Images of the stub scenes implemented in this template.
 
 Game studio splash scene
-![studio splash](screenshots/splash.png)
+![studio splash](https://imgur.com/lwi98Xe)
 
 Raylib logo animation scene
-![logo](screenshots/logo.png)
+![logo](https://imgur.com/D7CB0tj)
 
 Button hovering
-![hover](screenshots/hover.png)
+![hover](https://imgur.com/x4XvDrL)
 
 Credit scene stub
-![credit scene](screenshots/credit.png)
+![credit scene](https://imgur.com/d7rqQt5)
 
  Developers
 
