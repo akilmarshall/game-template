@@ -1,4 +1,5 @@
 #include "api.hpp"
+#include <cmath>
 
 using namespace scene::splash;
 

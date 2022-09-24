@@ -1,7 +1,6 @@
 #ifndef API_HPP
 #define API_HPP
 
-#include <cmath>
 
 #include "data.hpp"
 #include "raylib.h"
