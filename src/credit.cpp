@@ -12,6 +12,9 @@ void api::scene::credit::update() {
     if (frame_counter / fps >= t) {
         done = true;
     }
+    if (IsMouseButtonPressed(0)) {
+        done = true;
+    }
     ++frame_counter;
 }
 void api::scene::credit::draw() {
