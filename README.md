@@ -21,6 +21,25 @@ This template implements 4 scenes:
 
 
 
+### How to build
+
+Building a native binary is easy. Unless something upstream breaks all is already configured.
+
+```bash
+$ cd src/
+$ make
+```
+
+Building for the web requires some setup. [source](https://github.com/raysan5/raylib/wiki/Working-for-Web-(HTML5))
+
+```bash
+$ yay -S emsdk
+$ emsdk update  # requires privilege
+$ emsdk install latest  # requires privilege
+$ emsdk activate latest  # requires privilege
+...
+```
+
 ### Features
 
  - Scene system with animated and instant transitions
